@@ -4,16 +4,16 @@ words =  ['demo', 'none', 'tied', 'evil', 'dome', 'mode', 'live',
 
 #words.keep_if {|s| s.chars.sort == 'demo'.chars.sort }
 
-annograms = []
+annograms = {}
 
 words.each {
-    |s|
-    p s
-    annogram = words.select {|w| s.chars.sort == w.chars.sort}
-    p annogram
-    if !annograms.include?(annogram)
-        annograms.push(annogram)
+    |word|
+    s = word.chars.sort
+    if annograms.has_key?(s)
+        annograms[s].push(word)
+    else
+        annograms[s] = [word]
     end
 }
 
-p annograms
+p annograms.values
