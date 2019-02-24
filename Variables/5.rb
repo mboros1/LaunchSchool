@@ -1,1 +1,0 @@
-# first one outputs 3, second one error, x is in a local scope to the do loop
