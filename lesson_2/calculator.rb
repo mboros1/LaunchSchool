@@ -10,7 +10,7 @@ end
 operator_message = { '+' => 'Adding',
                      '-' => 'Subtracting',
                      '*' => 'Multiplying',
-                     '/' =>'Dividing' }
+                     '/' => 'Dividing' }
 
 prompt("Welcome to Calculator! Enter your name:")
 name = ''
