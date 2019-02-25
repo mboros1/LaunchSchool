@@ -7,6 +7,11 @@ def valid_number?(num)
   num.to_i() != 0
 end
 
+operator_message = { '+' => 'Adding',
+                     '-' => 'Subtracting',
+                     '*' => 'Multiplying',
+                     '/' =>'Dividing' }
+
 prompt("Welcome to Calculator! Enter your name:")
 name = ''
 
@@ -51,6 +56,7 @@ loop do
   MSG
   prompt(operator_prompt)
   result = nil
+  operator = ''
   loop do
     operator = gets().chomp()
 
@@ -69,6 +75,7 @@ loop do
     break if result
     prompt("Please select +,-,/, or *")
   end
+  prompt("#{operator_message[operator]} the numbers...")
   prompt("The result is #{result}")
   prompt("Do you want to perform another calculation? (Y to calculate again)")
 
