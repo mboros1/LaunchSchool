@@ -7,11 +7,8 @@ munsters = {
   "Marilyn" => { "age" => 23, "gender" => "female"}
 }
 
-male_munsters = munsters.select {|_,v| v['gender'] == 'male'}
+munsters.each do |k,v|
+  puts"#{k} is a #{v['age']}-year-old #{v['gender']}."
+end
 
-male_age = 0
-
-male_munsters.each {|_,v| male_age += v['age']}
-
-p male_age
 
